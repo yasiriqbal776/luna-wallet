@@ -1,0 +1,28 @@
+@import "variables";
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+#whole-container {
+  display: grid;
+  grid-template-columns: 10% auto;
+  .side-bar{
+    background-color: $gray-green;
+  }
+  background-color: $white;
+  .right-container{
+    display: grid;
+    grid-template-rows: auto auto;
+    .topmost-container{
+      display: grid;
+      background-color: $bright-red;
+      width: 100%;
+      height: 90px;
+      box-sizing: border-box;
+      padding: 0 48px 0 31px;
+    }
+  }
+
+}

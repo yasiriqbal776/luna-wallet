@@ -5,7 +5,8 @@ import SplashScreen from '../components/SplashScreen/SplashScreen'
 import ArchiveMain from '../components/ArchiveMainComponent/ArchiveMain'
 import AddAccount from '../components/AccountsData/AddAccount'
 import CreateAccount from '../components/AccountsData/CreateAccount'
-import Dashboard from '../components/DasboardComponents/Dashboard'
+// import Dashboard from '../components/DasboardComponents/Dashboard'
+import Dashboard from '../components/NewDashboard/Dashboard'
 import WalletDashboard from '../components/DasboardComponents/WalletDashboardComponents/WalletDashboard'
 import TransferFunds from '../components/DasboardComponents/TransferFundsComponents/TransferFunds'
 import Token from '../components/DasboardComponents/TokensComponents/Token'
@@ -31,25 +32,26 @@ Vue.use(Router);
 export default new Router({
     routes: [
         {
-            path: '/archiveAccounts',
-            name: 'ArchiveMain',
-            component: ArchiveMain,
+            path: '/',
+            name: 'Dashboard',
+            component: Dashboard,
         },{
             path: '/gexpLogs',
             name: 'GexpLogs',
             component: gexpLogs,
-        },{
-            path: '/',
-            name: 'SplashApp',
-            component: SplashApp,
-            children: [
-                {
-                    path: '/',
-                    name: 'SplashScreen',
-                    component: SplashScreen,
-                },
-            ]
         },
+        // {
+        //     path: '/',
+        //     name: 'SplashApp',
+        //     component: SplashApp,
+        //     children: [
+        //         {
+        //             path: '/',
+        //             name: 'SplashScreen',
+        //             component: SplashScreen,
+        //         },
+        //     ]
+        // },
         {
             path: '/accounts',
             name: 'AccountApp',
@@ -67,95 +69,95 @@ export default new Router({
                 },
             ]
         },
-        {
-            path: '/dashboard',
-            name: 'MainApp',
-            component: MainApp,
-            children: [
-                {
-                    path: '/dashboard',
-                    name: 'Dashboard',
-                    component: Dashboard,
-                    children: [
-                        {
-                            path: '/walletdashboard',
-                            name: 'WalletDashboard',
-                            component: WalletDashboard
-                        },
-                        {
-                            path: '/transferfunds',
-                            name: 'TransferFunds',
-                            component: TransferFunds
-                        },
-                        {
-                            path: '/expwalletaddress',
-                            name: 'EXPWalletAdd',
-                            component: EXPWalletAdd
-                        },
-                        {
-                            path: '/token',
-                            name: 'Token',
-                            component: Token
-                        },
-                        {
-                            path: '/tokenlab',
-                            name: 'TokenLAB',
-                            component: Tokenlab
-                        },
-                        {
-                            path: '/contracts',
-                            name: 'Contracts',
-                            component: Contracts
-                        },
-                        {
-                            path: '/watchcontracts',
-                            name: 'WatchContract',
-                            component: WatchContract
-                        },
-                        {
-                            path: '/deploycontracts',
-                            name: 'DeployContract',
-                            component: DeployContract
-                        },
-                        {
-                            path: '/currencyconverter',
-                            name: 'CurrencyConverter',
-                            component: CurrencyConverter
-                        },
-                        {
-                            path: '/watchToken',
-                            name: 'watchToken',
-                            component: AddToken
-                        },
-                        {
-                            path: '/accountdetails',
-                            name: 'accountdetails',
-                            component: ViewAccount
-                        },
-                        {
-                            path: '/contractdetails',
-                            name: 'contractdetails',
-                            component: ContractDetails
-                        },
-                        {
-                            path: '/contractdata',
-                            name: 'Contract Data',
-                            component: contractData
-                        },
-                        {
-                            path: '/transactiondetails',
-                            name: 'transactiondetails',
-                            component: Transactiondetail
-                        },
-                        {
-                            path: '/eventdetails',
-                            name: 'EventDetails',
-                            component: EventDetails
-                        }
-                    ]
-                },
-            ]
-        },
+        // {
+        //     path: '/',
+        //     name: 'MainApp',
+        //     component: MainApp,
+        //     children: [
+        //         {
+        //             path: '/',
+        //             name: 'Dashboard',
+        //             component: Dashboard,
+        //             children: [
+        //                 {
+        //                     path: '/walletdashboard',
+        //                     name: 'WalletDashboard',
+        //                     component: WalletDashboard
+        //                 },
+        //                 {
+        //                     path: '/transferfunds',
+        //                     name: 'TransferFunds',
+        //                     component: TransferFunds
+        //                 },
+        //                 {
+        //                     path: '/expwalletaddress',
+        //                     name: 'EXPWalletAdd',
+        //                     component: EXPWalletAdd
+        //                 },
+        //                 {
+        //                     path: '/token',
+        //                     name: 'Token',
+        //                     component: Token
+        //                 },
+        //                 {
+        //                     path: '/tokenlab',
+        //                     name: 'TokenLAB',
+        //                     component: Tokenlab
+        //                 },
+        //                 {
+        //                     path: '/contracts',
+        //                     name: 'Contracts',
+        //                     component: Contracts
+        //                 },
+        //                 {
+        //                     path: '/watchcontracts',
+        //                     name: 'WatchContract',
+        //                     component: WatchContract
+        //                 },
+        //                 {
+        //                     path: '/deploycontracts',
+        //                     name: 'DeployContract',
+        //                     component: DeployContract
+        //                 },
+        //                 {
+        //                     path: '/currencyconverter',
+        //                     name: 'CurrencyConverter',
+        //                     component: CurrencyConverter
+        //                 },
+        //                 {
+        //                     path: '/watchToken',
+        //                     name: 'watchToken',
+        //                     component: AddToken
+        //                 },
+        //                 {
+        //                     path: '/accountdetails',
+        //                     name: 'accountdetails',
+        //                     component: ViewAccount
+        //                 },
+        //                 {
+        //                     path: '/contractdetails',
+        //                     name: 'contractdetails',
+        //                     component: ContractDetails
+        //                 },
+        //                 {
+        //                     path: '/contractdata',
+        //                     name: 'Contract Data',
+        //                     component: contractData
+        //                 },
+        //                 {
+        //                     path: '/transactiondetails',
+        //                     name: 'transactiondetails',
+        //                     component: Transactiondetail
+        //                 },
+        //                 {
+        //                     path: '/eventdetails',
+        //                     name: 'EventDetails',
+        //                     component: EventDetails
+        //                 }
+        //             ]
+        //         },
+        //     ]
+        // },
         {
             path: '*',
             redirect: '/'

@@ -30,21 +30,21 @@ export default {
         };
     },
     created(){
-        if (typeof web3 !== 'undefined') {
-            // console.log("if (typeof web3 !== 'undefined')");
-            getAllAcounts();
-            getAllWatchOnlyAcounts();
-        } else {
-            // set the provider you want from Web3.providers
-            startConnectWeb();
-            this.intervalid1 = setInterval(() => {
-                if(typeof web3 !== 'undefined' ){
-                    getAllAcounts();
-                    getAllWatchOnlyAcounts();
-                    clearInterval(this.intervalid1)
-                }
-            }, 100);
-        }
+        // if (typeof web3 !== 'undefined') {
+        //     // console.log("if (typeof web3 !== 'undefined')");
+        //     getAllAcounts();
+        //     getAllWatchOnlyAcounts();
+        // } else {
+        //     // set the provider you want from Web3.providers
+        //     startConnectWeb();
+        //     this.intervalid1 = setInterval(() => {
+        //         if(typeof web3 !== 'undefined' ){
+        //             getAllAcounts();
+        //             getAllWatchOnlyAcounts();
+        //             clearInterval(this.intervalid1)
+        //         }
+        //     }, 100);
+        // }
     },
     methods: {
 

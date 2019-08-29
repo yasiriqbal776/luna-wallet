@@ -1,0 +1,25 @@
+#side-log{
+  display: grid;
+  grid-template-rows: repeat(6,auto);
+  position: relative;
+  z-index: 1;
+  max-width: 178px;
+  .side-btn{
+    background-color: $gray-green;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: -25px;
+    z-index: 3;
+    width: 25px;
+
+  }
+  .logo{
+    background-color: $gray-green;
+    border: none;
+    //outline: none;
+    //width: 100%;
+    padding: 15px 22px 0 15px;
+    //height: 100px;
+  }
+}
